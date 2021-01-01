@@ -1,0 +1,24 @@
+<!-- DOM tree building starts -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPage</title>
+    <link rel="stylesheet" href="style.css"> <!-- here DOM building will stop and CSSOM(CSS Object Model) will start building  -->
+    <!-- CSSOM is non-increamental so it will load at once -->
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <h1 id="heading">Hello</h1>
+    <button onclick="clicked()">click me</button>
+    <!-- <script src="app.js"></script> -->
+</body>
+</html>
+
+<!-- Finally these thing will happen
+DOM + Download css file + created CSSOM + DOM + Download and execute js file +
+Render tree (DOM + CSSOM) ==> Layout ==> paint ==> we see in browser -->
+<!-- CSS force browser to stop DOM -->
+<!-- Meta data is data of data which is for search engine (SEO) -->
+<!-- defer is used inside script tag so that js file will download along with DOM building and executes js file after DOM building finished -->
